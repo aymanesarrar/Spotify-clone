@@ -16,12 +16,17 @@ const reducer = (state, action) => {
       return {
         ...state, // => keep whatever is in the current state
         user: action.user // => update the user whatever action.user was
-      }
+      };
     case 'SET_TOKEN':
       return {
         ...state,
         token: action.token
-      }
+      };
+    case 'SET_PLAYLISTS':
+      return {
+        ...state,
+        playlists: action.playlists
+      };
       default:
         return state;
   }
