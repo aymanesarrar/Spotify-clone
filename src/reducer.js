@@ -1,16 +1,17 @@
 export const initialState = {
   user: null,
-  playlists: [],
-  playing: false,
-  item: null,
-  token: null
+    playlists: [],
+    spotify: null,
+    discover_weekly: null,
+    top_artists: null,
+    playing: false,
+    token: null
 };
 
 //action manipulate what the Data layer looks like
 //state is how it is currently look
 const reducer = (state, action) => {
   //action => type, [payload]
-    console.log(action);
   switch(action.type) {
     case 'SET_USER':
       return {
